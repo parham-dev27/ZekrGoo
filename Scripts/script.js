@@ -10,12 +10,14 @@ $(document).ready(function () {
             $("h3").text(num);
             localStorage.setItem(window.location.pathname, num);
         } else {
+            $("h3").text(10);
             $(".zekr__add").prop("disabled", true);
             localStorage.setItem(window.location.pathname, 0);
         }
     });
     $(".reset").click(function () {
         localStorage.setItem(window.location.pathname, 0);
-        window.location.reload();
+        $("h3").text(0);
+        $(".zekr__add").prop("disabled", false);
     });
 });
