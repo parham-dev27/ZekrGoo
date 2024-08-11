@@ -17,6 +17,7 @@ body {
 }
 
 .zekrs {
+    user-select: none;
     width: 100%;
     max-width: 768px;
     margin-top: 2em;
@@ -27,7 +28,6 @@ body {
     flex-direction: column;
     &__zekr {
         border-radius: 0.5em;
-        padding: 0.3em;
         text-align: center;
         color: white;
         @include var.font-normal;
@@ -39,6 +39,9 @@ body {
         &:focus-visible {
             color: var.$aqua;
             border-color: var.$aqua;
+        }
+        a p {
+            padding: 0.3em;
         }
     }
 }
@@ -56,6 +59,7 @@ body {
     h3 {
         font-size: 2em;
         color: white;
+        user-select: none;
         &.active {
             color: var.$aqua;
         }
@@ -97,9 +101,15 @@ body {
     position: absolute;
     top: 1rem;
     right: 1rem;
+    user-select: none;
+
     cursor: pointer;
     &:hover {
         filter: brightness(0.9);
+    }
+    &--full {
+        top: unset;
+        bottom: 1em;
     }
 }
 .home {
@@ -112,8 +122,13 @@ body {
     position: absolute;
     top: 1rem;
     left: 1rem;
+    user-select: none;
     cursor: pointer;
     &:hover {
         filter: brightness(0.9);
     }
+}
+
+.daily {
+    font-size: 3em;
 }

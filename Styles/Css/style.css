@@ -50,6 +50,7 @@ body {
 }
 
 .zekrs {
+  user-select: none;
   width: 100%;
   max-width: 768px;
   margin-top: 2em;
@@ -61,7 +62,6 @@ body {
 }
 .zekrs__zekr {
   border-radius: 0.5em;
-  padding: 0.3em;
   text-align: center;
   color: white;
   font-family: "Roboto", sans-serif;
@@ -75,6 +75,9 @@ body {
 .zekrs__zekr:hover, .zekrs__zekr:focus-visible {
   color: #46dfe7;
   border-color: #46dfe7;
+}
+.zekrs__zekr a p {
+  padding: 0.3em;
 }
 
 .zekr__score {
@@ -91,6 +94,7 @@ body {
 .zekr__score h3 {
   font-size: 2em;
   color: white;
+  user-select: none;
 }
 .zekr__score h3.active {
   color: #46dfe7;
@@ -130,10 +134,15 @@ body {
   position: absolute;
   top: 1rem;
   right: 1rem;
+  user-select: none;
   cursor: pointer;
 }
 .reset:hover {
   filter: brightness(0.9);
+}
+.reset--full {
+  top: unset;
+  bottom: 1em;
 }
 
 .home {
@@ -146,10 +155,15 @@ body {
   position: absolute;
   top: 1rem;
   left: 1rem;
+  user-select: none;
   cursor: pointer;
 }
 .home:hover {
   filter: brightness(0.9);
+}
+
+.daily {
+  font-size: 3em;
 }
 
 /*# sourceMappingURL=style.css.map */

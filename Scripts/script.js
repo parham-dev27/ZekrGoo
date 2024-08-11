@@ -1,24 +1,21 @@
 $(document).ready(function () {
+    window.location.pathname;
+    let val = localStorage.getItem(window.location.pathname);
+    if (val) {
+        $("h3").text(val);
+    }
     $(".zekr__add").click(function () {
-        let num = parseInt($("h3.active").text()) + 1;
-        if ($("h3.active:first-child").length) {
-            if (num != 35) {
-                $("h3.active").text(num);
-            } else {
-                $("h3.active").next().addClass("active").text(1);
-                $("h3.active").first().removeClass("active");
-            }
+        let num = parseInt($("h3").text()) + 1;
+        if (num != 10) {
+            $("h3").text(num);
+            localStorage.setItem(window.location.pathname, num);
         } else {
-            if (num != 34) {
-                $("h3.active").text(num);
-                if ($("h3.active").is(":last-child") && num == 33) {
-                    $("h3.active").first().removeClass("active");
-                    $(".zekr__add").prop("disabled", true);
-                }
-            } else {
-                $("h3.active").next().addClass("active").text(1);
-                $("h3.active").first().removeClass("active");
-            }
+            $(".zekr__add").prop("disabled", true);
+            localStorage.setItem(window.location.pathname, 0);
         }
+    });
+    $(".reset").click(function () {
+        localStorage.setItem(window.location.pathname, 0);
+        window.location.reload();
     });
 });
