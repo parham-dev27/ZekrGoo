@@ -28,6 +28,10 @@ button {
   display: block;
 }
 
+a {
+  all: unset;
+}
+
 body {
   font-family: "Roboto", sans-serif;
   font-weight: 700;
@@ -66,10 +70,86 @@ body {
   font-size: 1.75em;
   margin: 5px;
   border: 1px dashed grey;
+  cursor: pointer;
 }
 .zekrs__zekr:hover, .zekrs__zekr:focus-visible {
-  color: #2fb9c0;
-  border-color: #2fb9c0;
+  color: #46dfe7;
+  border-color: #46dfe7;
+}
+
+.zekr__score {
+  width: 100%;
+  max-width: 768px;
+  margin-top: 2em;
+  padding: 1.5em;
+  border: 1px solid white;
+  border-radius: 1em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.zekr__score h3 {
+  font-size: 2em;
+  color: white;
+}
+.zekr__score h3.active {
+  color: #46dfe7;
+}
+
+.zekr__add {
+  max-width: 768px;
+  width: 100%;
+  padding: 0.25em 0.75em;
+  background-color: #343a40;
+  box-sizing: border-box;
+  font-size: 3em;
+  color: white;
+  user-select: none;
+  text-align: center;
+  border-radius: 0.3em;
+}
+.zekr__add:active {
+  outline: 2px solid #46dfe7;
+}
+.zekr__add:disabled {
+  background-color: #1d2121;
+  outline: none;
+}
+
+.body--zekr {
+  justify-content: space-around;
+}
+
+.reset {
+  color: white;
+  background-color: rgb(110, 0, 0);
+  display: grid;
+  place-content: center;
+  padding: 0.75rem;
+  border-radius: 50%;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  cursor: pointer;
+}
+.reset:hover {
+  filter: brightness(0.9);
+}
+
+.home {
+  color: white;
+  background-color: rgb(0, 90, 0);
+  display: grid;
+  place-content: center;
+  padding: 0.75rem;
+  border-radius: 50%;
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  cursor: pointer;
+}
+.home:hover {
+  filter: brightness(0.9);
 }
 
 /*# sourceMappingURL=style.css.map */

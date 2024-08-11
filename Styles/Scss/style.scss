@@ -34,10 +34,86 @@ body {
         font-size: 1.75em;
         margin: 5px;
         border: 1px dashed grey;
+        cursor: pointer;
         &:hover,
         &:focus-visible {
             color: var.$aqua;
             border-color: var.$aqua;
         }
+    }
+}
+
+.zekr__score {
+    width: 100%;
+    max-width: 768px;
+    margin-top: 2em;
+    padding: 1.5em;
+    border: 1px solid white;
+    border-radius: 1em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    h3 {
+        font-size: 2em;
+        color: white;
+        &.active {
+            color: var.$aqua;
+        }
+    }
+}
+
+.zekr__add {
+    max-width: 768px;
+    width: 100%;
+    padding: 0.25em 0.75em;
+    background-color: var.$lighter-color;
+    box-sizing: border-box;
+    font-size: 3em;
+    color: white;
+    user-select: none;
+    text-align: center;
+    border-radius: 0.3em;
+
+    &:active {
+        outline: 2px solid var.$aqua;
+    }
+    &:disabled {
+        background-color: var.$background-color;
+        outline: none;
+    }
+}
+
+.body--zekr {
+    justify-content: space-around;
+}
+
+.reset {
+    color: white;
+    background-color: var.$red;
+    display: grid;
+    place-content: center;
+    padding: 0.75rem;
+    border-radius: 50%;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+    &:hover {
+        filter: brightness(0.9);
+    }
+}
+.home {
+    color: white;
+    background-color: var.$green;
+    display: grid;
+    place-content: center;
+    padding: 0.75rem;
+    border-radius: 50%;
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    cursor: pointer;
+    &:hover {
+        filter: brightness(0.9);
     }
 }
