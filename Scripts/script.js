@@ -6,11 +6,11 @@ $(document).ready(function () {
     }
     $(".zekr__add").click(function () {
         let num = parseInt($("h3").text()) + 1;
-        if (num != 10) {
+        if (num != 100) {
             $("h3").text(num);
             localStorage.setItem(window.location.pathname, num);
         } else {
-            $("h3").text(10);
+            $("h3").text(100);
             $(".zekr__add").prop("disabled", true);
             localStorage.setItem(window.location.pathname, 0);
         }
