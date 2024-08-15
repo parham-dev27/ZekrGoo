@@ -14,6 +14,45 @@ $(document).ready(function () {
                 if ($("h3.active").is(":last-child") && num == 33) {
                     $("h3.active").first().removeClass("active");
                     $(".zekr__add").prop("disabled", true);
+                    if (
+                        localStorage.getItem("Sum:" + window.location.pathname)
+                    ) {
+                        localStorage.setItem(
+                            "Sum:" + window.location.pathname,
+                            parseInt(
+                                localStorage.getItem(
+                                    "Sum:" + window.location.pathname
+                                )
+                            ) + 1
+                        );
+                    } else {
+                        localStorage.setItem(
+                            "Sum:" + window.location.pathname,
+
+                            1
+                        );
+                    }
+                    // if (
+                    //     Number.isInteger(
+                    //         localStorage.getItem(
+                    //             "Sum:" + window.location.pathname
+                    //         )
+                    //     )
+                    // ) {
+                    //     localStorage.setItem(
+                    //         "Sum:" + window.location.pathname,
+                    //         parseInt(
+                    //             localStorage.getItem(
+                    //                 "Sum:" + window.location.pathname
+                    //             )
+                    //         ) + 1
+                    //     );
+                    // } else {
+                    //     localStorage.setItem(
+                    //         "Sum:" + window.location.pathname,
+                    //         0
+                    //     );
+                    // }
                 }
             } else {
                 $("h3.active").next().addClass("active").text(1);

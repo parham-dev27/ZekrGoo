@@ -6,6 +6,20 @@ $(document).ready(function () {
     }
     $(".zekr__add").click(function () {
         let num = parseInt($("h3").text()) + 1;
+        if (localStorage.getItem("Sum:" + window.location.pathname)) {
+            localStorage.setItem(
+                "Sum:" + window.location.pathname,
+                parseInt(
+                    localStorage.getItem("Sum:" + window.location.pathname)
+                ) + 1
+            );
+        } else {
+            localStorage.setItem(
+                "Sum:" + window.location.pathname,
+
+                1
+            );
+        }
         if (num != 100) {
             $("h3").text(num);
             localStorage.setItem(window.location.pathname, num);
