@@ -132,3 +132,38 @@ body {
 .daily {
     font-size: 3em;
 }
+
+.statistics {
+    @extend .home;
+    top: unset;
+    bottom: 1rem;
+}
+
+.statistics--table {
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 768px;
+    color: white;
+    margin-top: 2em;
+}
+
+.statistics--table td,
+.statistics--table th {
+    width: 50%;
+    border: 2px solid white;
+    padding: 1em;
+    font-weight: normal;
+}
+
+.statistics--table th {
+    font-weight: bold;
+    font-size: 1.25em;
+}
+
+.statistics--table thead tr:first-child {
+    background-color: black;
+}
+
+.title.statistics--header {
+    margin-top: 10vh;
+}
